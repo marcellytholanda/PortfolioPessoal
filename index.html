@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal (CV online)</title>
+    <style>
+        /* Resetando alguns estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Definindo o fundo e a fonte padrão */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Estilizando o header com o título */
+        header {
+            text-align: center; /* Centraliza o conteúdo */
+            padding: 50px 20px; /* Espaço acima e abaixo do título */
+            background: linear-gradient(45deg, #ff6ec7, #ff7b00, #ffe600); /* Gradiente vibrante */
+            color: #fff; /* Cor do texto branco */
+        }
+
+        header img {
+            width: 800px; /* Aumentei o tamanho da imagem para 800px */
+            margin-bottom: 20px; /* Espaço entre a imagem e o título */
+        }
+
+        header h1 {
+            font-size: 3rem; /* Tamanho maior para o título */
+            font-weight: bold;
+            text-transform: uppercase; /* Coloca o texto em maiúsculas */
+            color: #fff;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4); /* Sombra para melhorar a legibilidade */
+        }
+
+        /* Estilizando o subtítulo */
+        header p {
+            font-size: 1.5rem;
+            margin-top: 5px;
+            font-weight: 500;
+            color: #fff; /* Cor branca para o subtítulo */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave para legibilidade */
+        }
+
+        /* Estilo das Abas */
+        .abas {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .aba {
+            padding: 15px 30px;
+            margin: 0 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .aba:hover {
+            background-color: #ff7b00;
+            color: white;
+        }
+
+        /* Conteúdo das Abas */
+        .conteudo-aba {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .conteudo-aba.active {
+            display: block;
+        }
+
+        /* Estilizando o restante das seções para que fiquem bem organizadas */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff7b00;
+        }
+
+        ul li p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Ajuste no formulário de contato */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        form button {
+            padding: 12px 20px;
+            background-color: #ff7b00;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #ff6ec7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título da Página -->
+    <header>
+        <img src="images/nome-titulo.png" alt="Imagem Título">
+        <h1>Cada projeto é uma nova história</h1>
+        <p>Venha conhecer a minha!</p>
+    </header>
+
+    <!-- Abas -->
+    <div class="abas">
+        <div class="aba" onclick="mostrarAba('sobre-mim')">Sobre Mim</div>
+        <div class="aba" onclick="mostrarAba('formacao')">Formação</div>
+        <div class="aba" onclick="mostrarAba('projetos')">Projetos</div>
+        <div class="aba" onclick="mostrarAba('contato')">Contato</div>
+    </div>
+
+    <!-- Conteúdo das Abas -->
+    <div id="sobre-mim" class="conteudo-aba active">
+        <h2>Quem Sou Eu</h2>
+            <p>Olá, meu nome é <strong>Marcelly Torres de Holanda</strong> e sou graduanda nos cursos de <strong>Ciência de Dados</strong> e <strong>Logística</strong> pela <strong>Uninter</strong>. Estou em uma jornada de aprendizado onde busco integrar duas áreas que se complementam perfeitamente: a tecnologia e a logística empresarial. Minha motivação é usar essas duas áreas para criar soluções inovadoras no mercado.</p>
+
+    <h3>Minhas Habilidades</h3>
+    <p>Tenho habilidades e competências que me ajudam a atuar de forma estratégica e eficiente. As principais são:</p>
+    <ul>
+        <li><strong>Análise de Dados:</strong> Transformo dados em insights estratégicos para melhorar as decisões empresariais.</li>
+        <li><strong>Automação de Processos:</strong> Utilizo a tecnologia para automatizar processos, reduzir custos e otimizar operações logísticas.</li>
+        <li><strong>Administração Estratégica:</strong> Tenho capacidade de compreender as necessidades do negócio e propor soluções práticas e eficazes.</li>
+    </ul>
+
+    <h3>Projetos Relevantes</h3>
+    <p>Recentemente, trabalhei em dois projetos que demonstram a aplicação das minhas habilidades:</p>
+    <ol>
+        <li><strong>Projeto de Extensão sobre Mudanças Climáticas:</strong> Concluí um projeto de pesquisa e publiquei no GitHub, abordando temas relacionados a mudanças climáticas e dados ambientais.</li>
+        <li><strong>Landing Page para a Alfaar Refrigeração:</strong> Criei uma página de apresentação de serviços para atrair mais clientes para a empresa, utilizando design responsivo e técnicas de marketing digital.</li>
+    </ol>
+
+    <h3>Minha Motivação</h3>
+    <p>Sou movida pela ideia de <strong>inovar</strong> e <strong>resolver problemas complexos</strong> de forma prática. Busco sempre novas maneiras de melhorar processos e otimizar o tempo das empresas. Acredito que a integração entre tecnologia e logística pode gerar resultados extraordinários e transformar o mercado de forma positiva.</p>
+
+    <h3>Planos para o Futuro</h3>
+    <p>Minha jornada de aprendizado não para aqui. Tenho grandes planos para o futuro:</p>
+    <ul>
+        <li><strong>Investir em especializações:</strong> Em breve, pretendo me aprofundar mais em <strong>Engenharia da Computação</strong> para criar soluções mais complexas e funcionais no campo logístico.</li>
+        <li><strong>Crescimento contínuo:</strong> Continuarei buscando novas formas de aprender e me aperfeiçoar nas áreas de tecnologia e gestão.</li>
+    </ul>
+
+    <h3>Minha Personalidade</h3>
+    <p>Sou uma pessoa dinâmica, com forte experiência em <strong>administração</strong>, <strong>comunicação</strong> e <strong>atendimento ao cliente</strong>. Essas habilidades me permitem trabalhar bem com equipes diversas e resolver problemas de forma colaborativa. Meu foco está em oferecer soluções que tragam benefícios reais para as empresas e seus processos.</p>
+
+    <h3>O Que Eu Gosto de Fazer</h3>
+    <p>Nos meus momentos de lazer, gosto de me desconectar com <strong>jogos online</strong>. Além de me proporcionar entretenimento, esses jogos ajudam a manter meu raciocínio rápido e criativo, o que é um benefício direto para a minha vida profissional.</p>
+</div>
+    </div>
+
+    <div id="formacao" class="conteudo-aba">
+        <h2>Minha Formação Educacional</h2>
+        <p>Atualmente, estou cursando o Ensino Superior em <strong>Logística</strong> e <strong>Ciência de Dados</strong> no <strong>Centro Universitário Internacional</strong> (Uninter), ambos no 2º período. Estou imersa em duas áreas que, quando combinadas, abrem um leque de possibilidades para otimizar processos e tomar decisões estratégicas baseadas em dados.</p>
+
+    <p>Além das graduações, também estou me aprimorando no <strong>Inglês</strong>, que é fundamental para minha evolução profissional, especialmente em um mundo cada vez mais globalizado. O curso de Inglês também é oferecido pela <strong>Uninter</strong>.</p>
+
+    <h3>Formação Complementar</h3>
+
+    <p>Minha formação vai além da educação formal. Participei de vários cursos e bootcamps que me proporcionaram habilidades práticas e um diferencial competitivo. Um dos cursos que mais me agregaram foi o <strong>Bootcamp de Data Analytics com Power BI</strong>, oferecido pela Digital Innovation One (dio.me), onde aprendi a manipular dados, criar dashboards interativos e aplicar fórmulas e DAX para otimizar a análise de informações. Esse curso teve uma carga horária de 82 horas e me deu uma base sólida em análise de dados.</p>
+
+    <p>Além disso, busquei aprimorar meus conhecimentos em áreas estratégicas da administração e logística com cursos como:</p>
+
+    <ul>
+        <li><strong>Administração Estratégica</strong> – Instituto Federal do Rio Grande do Sul (IFRS) – Carga horária de 40h</li>
+        <li><strong>Administração Financeira</strong> – Instituto Federal do Rio Grande do Sul (IFRS) – Carga horária de 40h</li>
+        <li><strong>Assistente de Logística</strong> – Instituto Federal do Rio Grande do Sul (IFRS) – Carga horária de 200h</li>
+        <li><strong>Assistente de Serviços em Comércio Exterior</strong> – Instituto Federal do Rio Grande do Sul (IFRS) – Carga horária de 200h</li>
+        <li><strong>Assistente Financeiro</strong> – Instituto Federal do Rio Grande do Sul (IFRS) – Carga horária de 200h</li>
+        <li><strong>Almoxarife</strong> – Instituto Federal do Rio Grande do Sul (IFRS) – Carga horária de 200h</li>
+    </ul>
+
+    <p>Esses cursos complementares foram fundamentais para expandir meus conhecimentos em diversas áreas e me capacitar a aplicar soluções eficazes em processos logísticos e administrativos. Acredito que a integração entre a teoria adquirida na graduação e as habilidades práticas adquiridas nesses cursos me prepara para desafios cada vez maiores no mercado de trabalho.</p>
+</div>
+
+<style>
+    /* Espaçamento entre seções */
+    .conteudo-aba {
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        line-height: 1.6; /* Aumenta a altura da linha para melhorar a leitura */
+    }
+
+    ul, ol {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    /* Adicionando mais espaço entre as seções para não ficarem "grudadas" */
+    .conteudo-aba h2, .conteudo-aba p, .conteudo-aba ul {
+        margin-top: 25px;
+    }
+</style>
+
+    <div id="projetos" class="conteudo-aba">
+        <h2>Projetos Realizados</h2>
+
+    <div class="projeto">
+        <h3>Landing Page para Alfaar Refrigeração</h3>
+        <p>
+            Desenvolvi minha primeira **Landing Page** para a empresa Alfaar Refrigeração, especializada em climatização e refrigeração. O objetivo era criar uma página atrativa e funcional para divulgar seus serviços e atrair novos clientes.
+        </p>
+        <p><strong>Tecnologias utilizadas:</strong> HTML, CSS, Vercel, GitHub</p>
+        <p>
+            A página foi desenvolvida de forma a ser visualmente agradável e eficiente, com informações claras e acessíveis sobre os serviços oferecidos. 
+        </p>
+        <p>
+            🚀 <strong>Veja a página ao vivo:</strong> <a href="https://alfaarrefrigeracao.vercel.app/" target="_blank" class="link-destaque">Acessar Landing Page</a>
+        </p>
+        <p>
+            📂 <strong>Repositório no GitHub:</strong> <a href="https://github.com/marcellytholanda/site-alfaar" target="_blank" class="link-destaque">Veja o código e recursos</a>
+        </p>
+    </div>
+
+    <div class="projeto">
+        <h3>Análise de Dados Climáticos: Visualização Interativa com Inteligência Artificial</h3>
+        <p>
+            Desenvolvi um **dashboard interativo** como parte do projeto de **Atividade Extensionista II** para o curso de Ciência de Dados. O objetivo foi criar uma plataforma que utilizasse **dados climáticos** em tempo real para promover a conscientização ambiental entre alunos do Ensino Médio.
+        </p>
+        <p><strong>Tecnologias utilizadas:</strong> Power BI, APIs externas (OpenWeatherMap, NASA), Python, SQL</p>
+        <p>
+            O projeto incluiu a implementação de modelos de **Inteligência Artificial** para **previsões climáticas**, além de uma interface interativa que permite a visualização clara e dinâmica dos dados. Foi uma experiência rica em aprendizado sobre IA, integração de APIs e visualização de dados.
+        </p>
+        <p>
+            📂 <strong>Repositório GitHub:</strong> <a href="https://github.com/marcellytholanda/WeatherAI-Dashboard" target="_blank" class="link-destaque">Veja o código e a demonstração</a>
+        </p>
+    </div>
+</div>
+
+    <div id="contato" class="conteudo-aba">
+    <h2>Entre em Contato</h2>
+    <p>Se você está interessado em saber mais sobre meu trabalho ou em colaborar em um projeto, entre em contato comigo:</p>
+    <form action="https://formspree.io/f/xyzweebv" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+    <!-- Rodapé -->
+    <footer>
+    <p>&copy; 2025 Marcelly Torres de Holanda - Todos os direitos reservados</p>
+    <div class="redes-sociais">
+        <a href="https://github.com/marcellytholanda" target="_blank" title="Meu GitHub">
+            <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/marcelly-holanda-a1744ab4/" target="_blank" title="Meu LinkedIn">
+            <img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="LinkedIn">
+        </a>
+    </div>
+</footer>
+
+    <script>
+        function mostrarAba(aba) {
+            // Esconde todas as abas
+            const abas = document.querySelectorAll('.conteudo-aba');
+            abas.forEach(function(aba) {
+                aba.classList.remove('active');
+            });
+
+            // Exibe a aba selecionada
+            const abaSelecionada = document.getElementById(aba);
+            abaSelecionada.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

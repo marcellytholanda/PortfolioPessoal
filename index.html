@@ -344,17 +344,37 @@
 </div>
 
     <!-- Rodapé -->
-    <footer>
+<footer>
     <p>&copy; 2025 Marcelly Torres de Holanda - Todos os direitos reservados</p>
-    <div class="redes-sociais">
-        <a href="https://github.com/marcellytholanda" target="_blank" title="Meu GitHub">
-            <img src="https://img.icons8.com/material-outlined/24/000000/github.png" alt="GitHub">
+    <div class="social-links">
+        <a href="https://github.com/marcellytholanda" target="_blank">
+            <img src="images/github-icon.png" alt="GitHub" />
         </a>
-        <a href="https://www.linkedin.com/in/marcelly-holanda-a1744ab4/" target="_blank" title="Meu LinkedIn">
-            <img src="https://img.icons8.com/material-outlined/24/000000/linkedin.png" alt="LinkedIn">
+        <a href="https://www.linkedin.com/in/marcelly-holanda-a1744ab4/" target="_blank">
+            <img src="images/linkedin-icon.png" alt="LinkedIn" />
         </a>
     </div>
 </footer>
+
+<style>
+    /* Remove o sublinhado dos links */
+    footer a {
+        text-decoration: none; /* Remove o sublinhado */
+    }
+
+    footer a:hover {
+        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    }
+
+    .social-links a {
+        margin: 0 10px; /* Espaço entre os ícones */
+    }
+
+    .social-links img {
+        width: 30px; /* Tamanho do ícone */
+        height: 30px; /* Tamanho do ícone */
+    }
+</style>
 
     <script>
         function mostrarAba(aba) {

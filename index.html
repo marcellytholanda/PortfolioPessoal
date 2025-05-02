@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +27,9 @@
         }
 
         header img {
-            width: 800px; /* Aumentei o tamanho da imagem para 800px */
+            width: 100%; /* Imagem se ajusta ao tamanho da tela */
+            max-width: 800px; /* Limite de tamanho da imagem */
+            height: auto; /* Mantém a proporção da imagem */
             margin-bottom: 20px; /* Espaço entre a imagem e o título */
         }
 
@@ -40,7 +41,6 @@
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4); /* Sombra para melhorar a legibilidade */
         }
 
-        /* Estilizando o subtítulo */
         header p {
             font-size: 1.5rem;
             margin-top: 5px;
@@ -53,12 +53,13 @@
         .abas {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Permite que as abas se ajustem em telas menores */
             margin-top: 30px;
         }
 
         .aba {
             padding: 15px 30px;
-            margin: 0 10px;
+            margin: 10px;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -174,6 +175,78 @@
 
         footer p {
             font-size: 1rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .aba {
+                font-size: 1rem;
+                padding: 10px 20px;
+                margin: 5px;
+            }
+
+            .conteudo-aba {
+                padding: 15px;
+            }
+
+            form {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            ul li h3 {
+                font-size: 1.5rem;
+            }
+
+            ul li p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .aba {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            ul li h3 {
+                font-size: 1.2rem;
+            }
+
+            ul li p {
+                font-size: 0.9rem;
+            }
+
+            form button {
+                font-size: 1rem;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>

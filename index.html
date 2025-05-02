@@ -21,9 +21,9 @@
         /* Estilizando o header com o título */
         header {
             text-align: center; /* Centraliza o conteúdo */
-            padding: 50px 20px; /* Espaço acima e abaixo do título */
+            padding: 50px 20px; /* Adiciona espaço ao redor do conteúdo */
             background: linear-gradient(45deg, #ff6ec7, #ff7b00, #ffe600); /* Gradiente vibrante */
-            color: #fff; /* Cor do texto branco */
+            color: #fff; /* Cor do texto */
         }
 
         header img {
@@ -177,18 +177,19 @@
             font-size: 1rem;
         }
 
-        /* Responsividade */
+        /* Media query para telas menores que 768px - Ajustes de responsividade */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2.5rem; /* Tamanho do título reduzido */
             }
 
             header p {
-                font-size: 1.2rem;
+                font-size: 1.2rem; /* Ajuste no subtítulo */
             }
-
+       
+            /* Ajustando o tamanho das abas em telas menores */
             .aba {
-                font-size: 1rem;
+                font-size: 1rem; /* Menor para caber melhor em telas pequenas */
                 padding: 10px 20px;
                 margin: 5px;
             }
@@ -213,10 +214,11 @@
                 font-size: 1rem;
             }
         }
-
+        
+        /* Media query para telas menos que 480px - Ajuste de fonte e layout */
         @media (max-width: 480px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2rem; /* Reduz o título ainda mais para telas pequenas */
             }
 
             header p {
@@ -244,6 +246,7 @@
                 font-size: 1rem;
             }
 
+             /* Ajuste de fontes e tamanhos para elementos no rodapé */
             footer p {
                 font-size: 0.9rem;
             }
@@ -365,9 +368,11 @@
     }
 </style>
 
+    <!-- Seção de Projetos -->
     <div id="projetos" class="conteudo-aba">
         <h2>Projetos Realizados</h2>
 
+        <!-- Detalhes sobre os projetos -->
     <div class="projeto">
         <h3>Landing Page para Alfaar Refrigeração</h3>
         <p>
@@ -385,21 +390,19 @@
         </p>
     </div>
 
-    <div class="projeto">
-        <h3>Análise de Dados Climáticos: Visualização Interativa com Inteligência Artificial</h3>
-        <p>
-            Desenvolvi um dashboard interativo como parte do projeto de Atividade Extensionista II para o curso de Ciência de Dados. O objetivo foi criar uma plataforma que utilizasse dados climáticos em tempo real para promover a conscientização ambiental entre alunos do Ensino Médio.
-        </p>
-        <p><strong>Tecnologias utilizadas:</strong> Power BI, APIs externas (OpenWeatherMap, NASA), Python, SQL</p>
-        <p>
-            O projeto incluiu a implementação de modelos de Inteligência Artificial para previsões climáticas, além de uma interface interativa que permite a visualização clara e dinâmica dos dados. Foi uma experiência rica em aprendizado sobre IA, integração de APIs e visualização de dados.
-        </p>
-        <p>
-            📂 <strong>Repositório GitHub:</strong> <a href="https://github.com/marcellytholanda/WeatherAI-Dashboard" target="_blank" class="link-destaque">Veja o código e a demonstração</a>
-        </p>
-    </div>
+<div class="projeto">
+    <h3>Análise de Dados Climáticos: Visualização Interativa com Inteligência Artificial</h3>
+    <p>
+        Desenvolvi um dashboard interativo que utiliza dados climáticos em tempo real para promover a conscientização ambiental. 
+        Para isso, utilizei o Power BI para criar visualizações dinâmicas e interativas, enquanto o Python e SQL foram usados para processar e extrair dados de APIs externas.
+    </p>
+    <p><strong>Tecnologias utilizadas:</strong> Power BI, Python, SQL, APIs externas (OpenWeatherMap, NASA)</p>
+    <p>O projeto usa Inteligência Artificial para prever mudanças climáticas e apresentar essas previsões de forma interativa, proporcionando uma experiência única ao usuário.</p>
+    <p>📂 <strong>Repositório GitHub:</strong> <a href="https://github.com/marcellytholanda/WeatherAI-Dashboard" target="_blank" class="link-destaque">Veja o código e a demonstração</a></p>
+</div>
 </div>
 
+    <!-- Formulário de contato -->
     <div id="contato" class="conteudo-aba">
     <h2>Entre em Contato</h2>
     <p>Se você está interessado em saber mais sobre meu trabalho ou em colaborar em um projeto, entre em contato comigo:</p>
@@ -414,6 +417,9 @@
     <textarea id="mensagem" name="mensagem" required></textarea>
     <button type="submit">Enviar</button>
 </form>
+        <!-- Explicação sobre o Formulário de Contato -->
+<!-- O formulário de contato é integrado ao Formspree, uma ferramenta que permite o envio de e-mails sem a necessidade de servidor. 
+     O formulário é enviado diretamente para o meu e-mail quando preenchido e submetido. -->
 </div>
     
     <!-- Rodapé -->
@@ -450,16 +456,17 @@
     }
 </style>
     <script>
+        // Função que controla a troca de abas no porfólio
         function mostrarAba(aba) {
-            // Esconde todas as abas
+            // Esconde todas as abas antes de mostrar a aba selecionada
             const abas = document.querySelectorAll('.conteudo-aba');
             abas.forEach(function(aba) {
-                aba.classList.remove('active');
+                aba.classList.remove('active'); // Remove a classe 'active' que exibe a aba
             });
 
             // Exibe a aba selecionada
             const abaSelecionada = document.getElementById(aba);
-            abaSelecionada.classList.add('active');
+            abaSelecionada.classList.add('active'); // Adiciona a classe 'active' à aba clicada
         }
     </script>
 

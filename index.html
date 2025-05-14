@@ -28,8 +28,7 @@
         }
 
         header img {
-            width: 80%; /* Ajusta a largura da imagem para ser responsiva */
-            max-width: 800px; /* Garante um tamanho máximo */
+            width: 800px; /* Aumentei o tamanho da imagem para 800px */
             margin-bottom: 20px; /* Espaço entre a imagem e o título */
         }
 
@@ -41,6 +40,7 @@
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4); /* Sombra para melhorar a legibilidade */
         }
 
+        /* Estilizando o subtítulo */
         header p {
             font-size: 1.5rem;
             margin-top: 5px;
@@ -54,7 +54,6 @@
             display: flex;
             justify-content: center;
             margin-top: 30px;
-            flex-wrap: wrap;
         }
 
         .aba {
@@ -175,96 +174,6 @@
 
         footer p {
             font-size: 1rem;
-        }
-
-        /* Responsividade com Media Queries */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header p {
-                font-size: 1.2rem;
-            }
-
-            .aba {
-                font-size: 1rem;
-                padding: 12px 20px;
-                margin: 5px;
-            }
-
-            .conteudo-aba {
-                padding: 15px;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            ul li h3 {
-                font-size: 1.5rem;
-            }
-
-            ul li p {
-                font-size: 1rem;
-            }
-
-            /* Reduzindo o tamanho da imagem nas abas de conteúdo */
-            header img {
-                width: 90%;
-                max-width: 600px;
-            }
-
-            .projeto iframe {
-                width: 100%;
-                max-width: 560px;
-                height: auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            .aba {
-                font-size: 0.9rem;
-                padding: 10px 15px;
-                margin: 5px;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            h3 {
-                font-size: 1.4rem;
-            }
-
-            ul li h3 {
-                font-size: 1.4rem;
-            }
-
-            ul li p {
-                font-size: 1rem;
-            }
-
-            /* Ajuste na imagem do header para telas menores */
-            header img {
-                width: 95%;
-                max-width: 500px;
-            }
-
-            /* Ajuste nos vídeos para telas pequenas */
-            .projeto iframe {
-                width: 100%;
-                max-width: 480px;
-                height: auto;
-            }
         }
     </style>
 </head>

@@ -28,7 +28,8 @@
         }
 
         header img {
-            width: 800px; /* Aumentei o tamanho da imagem para 800px */
+            width: 100%;
+            width: 800px; 
             margin-bottom: 20px; /* Espaço entre a imagem e o título */
         }
 
@@ -54,6 +55,7 @@
             display: flex;
             justify-content: center;
             margin-top: 30px;
+            flex-wrap: wrap; /* Para adaptar melhor em telas pequenas */
         }
 
         .aba {
@@ -175,6 +177,117 @@
         footer p {
             font-size: 1rem;
         }
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .aba {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .conteudo-aba {
+        padding: 15px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .aba {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .conteudo-aba {
+        padding: 10px;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-aba h2, .conteudo-aba p, .conteudo-aba ul {
+        margin-top: 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .projeto {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .aba {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .conteudo-aba h2, .conteudo-aba p, .conteudo-aba ul {
+        margin-top: 20px;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 <body>

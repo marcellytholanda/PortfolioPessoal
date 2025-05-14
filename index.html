@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -21,15 +22,13 @@
         /* Estilizando o header com o título */
         header {
             text-align: center; /* Centraliza o conteúdo */
-            padding: 50px 20px; /* Adiciona espaço ao redor do conteúdo */
+            padding: 50px 20px; /* Espaço acima e abaixo do título */
             background: linear-gradient(45deg, #ff6ec7, #ff7b00, #ffe600); /* Gradiente vibrante */
-            color: #fff; /* Cor do texto */
+            color: #fff; /* Cor do texto branco */
         }
 
         header img {
-            width: 100%; /* Imagem se ajusta ao tamanho da tela */
-            max-width: 800px; /* Limite de tamanho da imagem */
-            height: auto; /* Mantém a proporção da imagem */
+            width: 800px; /* Aumentei o tamanho da imagem para 800px */
             margin-bottom: 20px; /* Espaço entre a imagem e o título */
         }
 
@@ -41,6 +40,7 @@
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4); /* Sombra para melhorar a legibilidade */
         }
 
+        /* Estilizando o subtítulo */
         header p {
             font-size: 1.5rem;
             margin-top: 5px;
@@ -53,13 +53,12 @@
         .abas {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Permite que as abas se ajustem em telas menores */
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
         .aba {
             padding: 15px 30px;
-            margin: 10px;
+            margin: 0 10px;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -176,81 +175,6 @@
         footer p {
             font-size: 1rem;
         }
-
-        /* Media query para telas menores que 768px - Ajustes de responsividade */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem; /* Tamanho do título reduzido */
-            }
-
-            header p {
-                font-size: 1.2rem; /* Ajuste no subtítulo */
-            }
-       
-            /* Ajustando o tamanho das abas em telas menores */
-            .aba {
-                font-size: 1rem; /* Menor para caber melhor em telas pequenas */
-                padding: 10px 20px;
-                margin: 5px;
-            }
-
-            .conteudo-aba {
-                padding: 10px;
-            }
-
-            form {
-                width: 90%;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            ul li h3 {
-                font-size: 1.5rem;
-            }
-
-            ul li p {
-                font-size: 1rem;
-            }
-        }
-        
-        /* Media query para telas menos que 480px - Ajuste de fonte e layout */
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem; /* Reduz o título ainda mais para telas pequenas */
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            .aba {
-                font-size: 0.9rem;
-                padding: 8px 16px;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            ul li h3 {
-                font-size: 1.2rem;
-            }
-
-            ul li p {
-                font-size: 0.9rem;
-            }
-
-            form button {
-                font-size: 1rem;
-            }
-
-             /* Ajuste de fontes e tamanhos para elementos no rodapé */
-            footer p {
-                font-size: 0.9rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -258,8 +182,8 @@
     <!-- Título da Página -->
     <header>
         <img src="images/nome-titulo.png" alt="Imagem Título">
-        <h1>Currículum Vitae Online</h1>
-        <p>Marcelly T. de Holanda</p>
+        <h1>Cada projeto é uma nova história</h1>
+        <p>Venha conhecer a minha!</p>
     </header>
 
     <!-- Abas -->
@@ -289,6 +213,12 @@
         <li><strong>Projeto de Extensão sobre Mudanças Climáticas:</strong> Concluí um projeto de pesquisa e publiquei no GitHub, abordando temas relacionados a mudanças climáticas e dados ambientais.</li>
         <li><strong>Landing Page para a Alfaar Refrigeração:</strong> Criei uma página de apresentação de serviços para atrair mais clientes para a empresa, utilizando design responsivo e técnicas de marketing digital.</li>
     </ol>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 20px; flex-wrap: wrap;">
+
+    <img src="images/dashboard.png" alt="Imagem projetos relevantes" style="max-width: 100%; width: 500px; border-radius: 8px;">
+    <img src="images/landingpage.png" alt="Imagem projetos relevantes" style="max-width: 100%; width: 575px; border-radius: 8px;">
+</div>
 
     <h3>Minha Motivação</h3>
     <p>Sou movida pela ideia de <strong>inovar</strong> e <strong>resolver problemas complexos</strong> de forma prática. Busco sempre novas maneiras de melhorar processos e otimizar o tempo das empresas. Acredito que a integração entre tecnologia e logística pode gerar resultados extraordinários e transformar o mercado de forma positiva.</p>
@@ -368,11 +298,9 @@
     }
 </style>
 
-    <!-- Seção de Projetos -->
     <div id="projetos" class="conteudo-aba">
         <h2>Projetos Realizados</h2>
 
-        <!-- Detalhes sobre os projetos -->
     <div class="projeto">
         <h3>Landing Page para Alfaar Refrigeração</h3>
         <p>
@@ -390,40 +318,50 @@
         </p>
     </div>
 
-<div class="projeto">
-    <h3>Análise de Dados Climáticos: Visualização Interativa com Inteligência Artificial</h3>
-    <p>
-        Desenvolvi um dashboard interativo que utiliza dados climáticos em tempo real para promover a conscientização ambiental. 
-        Para isso, utilizei o Power BI para criar visualizações dinâmicas e interativas, enquanto o Python e SQL foram usados para processar e extrair dados de APIs externas.
-    </p>
-    <p><strong>Tecnologias utilizadas:</strong> Power BI, Python, SQL, APIs externas (OpenWeatherMap, NASA)</p>
-    <p>O projeto usa Inteligência Artificial para prever mudanças climáticas e apresentar essas previsões de forma interativa, proporcionando uma experiência única ao usuário.</p>
-    <p>📂 <strong>Repositório GitHub:</strong> <a href="https://github.com/marcellytholanda/WeatherAI-Dashboard" target="_blank" class="link-destaque">Veja o código e a demonstração</a></p>
-</div>
+ <!-- Vídeo da Landing Page -->
+    <div style="margin-top: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0t3LSjDXnEc" title="Vídeo da Landing Page" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="projeto">
+        <h3>Análise de Dados Climáticos: Visualização Interativa com Inteligência Artificial</h3>
+        <p>
+            Desenvolvi um dashboard interativo como parte do projeto de Atividade Extensionista II para o curso de Ciência de Dados. O objetivo foi criar uma plataforma que utilizasse dados climáticos em tempo real para promover a conscientização ambiental entre alunos do Ensino Médio.
+        </p>
+        <p><strong>Tecnologias utilizadas:</strong> Power BI, APIs externas (OpenWeatherMap, NASA), Python, SQL</p>
+        <p>
+            O projeto incluiu a implementação de modelos de Inteligência Artificial para previsões climáticas, além de uma interface interativa que permite a visualização clara e dinâmica dos dados. Foi uma experiência rica em aprendizado sobre IA, integração de APIs e visualização de dados.
+        </p>
+        <p>
+            📂 <strong>Repositório GitHub:</strong> <a href="https://github.com/marcellytholanda/WeatherAI-Dashboard" target="_blank" class="link-destaque">Veja o código e a demonstração</a>
+        </p>
+    </div>
+
+<!-- Vídeo do Dashboard -->
+    <div style="margin-top: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vJRHqmaUSrI" title="Vídeo do Dashboard" frameborder="0" allowfullscreen></iframe>
+    </div>
 </div>
 
-    <!-- Formulário de contato -->
     <div id="contato" class="conteudo-aba">
     <h2>Entre em Contato</h2>
     <p>Se você está interessado em saber mais sobre meu trabalho ou em colaborar em um projeto, entre em contato comigo:</p>
- <form action="https://formspree.io/f/xyzweebv" method="POST">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
+    <form action="https://formspree.io/f/xyzweebv" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="mensagem">Mensagem:</label>
-    <textarea id="mensagem" name="mensagem" required></textarea>
-    <button type="submit">Enviar</button>
-</form>
-        <!-- Explicação sobre o Formulário de Contato -->
-<!-- O formulário de contato é integrado ao Formspree, uma ferramenta que permite o envio de e-mails sem a necessidade de servidor. 
-     O formulário é enviado diretamente para o meu e-mail quando preenchido e submetido. -->
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
 </div>
-    
+
     <!-- Rodapé -->
-<footer>
+    <footer>
     <p>&copy; 2025 Marcelly Torres de Holanda - Todos os direitos reservados</p>
     <div class="redes-sociais">
         <a href="https://github.com/marcellytholanda" target="_blank" title="Meu GitHub">
@@ -434,39 +372,18 @@
         </a>
     </div>
 </footer>
-    <style>
-    footer .redes-sociais {
-        margin-top: 10px;
-    }
 
-    footer .redes-sociais a {
-        text-decoration: none; /* Remove o sublinhado */
-        color: white;
-        font-size: 1.2rem;
-        margin: 0 10px; /* Espaço entre os links */
-        transition: color 0.3s ease;
-    }
-
-    footer .redes-sociais a:hover {
-        color: #ff7b00; /* Altera a cor ao passar o mouse */
-    }
-
-    footer p {
-        margin-bottom: 10px;
-    }
-</style>
     <script>
-        // Função que controla a troca de abas no porfólio
         function mostrarAba(aba) {
-            // Esconde todas as abas antes de mostrar a aba selecionada
+            // Esconde todas as abas
             const abas = document.querySelectorAll('.conteudo-aba');
             abas.forEach(function(aba) {
-                aba.classList.remove('active'); // Remove a classe 'active' que exibe a aba
+                aba.classList.remove('active');
             });
 
             // Exibe a aba selecionada
             const abaSelecionada = document.getElementById(aba);
-            abaSelecionada.classList.add('active'); // Adiciona a classe 'active' à aba clicada
+            abaSelecionada.classList.add('active');
         }
     </script>
 

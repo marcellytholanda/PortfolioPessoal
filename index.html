@@ -296,19 +296,21 @@
     justify-content: center;  /* Centraliza horizontalmente */
     align-items: center;      /* Centraliza verticalmente */
     width: 100%;
-    max-width: 300px;         /* Limita o tamanho máximo dos vídeos */
+    max-width: 900px;         /* Limita o tamanho máximo dos vídeos */
     margin: 20px auto;        /* Centraliza o vídeo na tela e adiciona margem */
 }
 
 .video-container iframe {
     width: 100%;
-    height: 300px;  /* Tamanho fixo da altura (ajuste conforme necessário) */
-    max-width: 900px;  /* O vídeo não vai ultrapassar esse tamanho */
+    height: 500px;  /* Tamanho fixo da altura (ajuste conforme necessário) */
     border-radius: 8px;  /* Arredonda os cantos do vídeo */
-
 }
-
-
+/* Adicionando uma regra de ajuste específico para telas maiores */
+@media (min-width: 1024px) {
+    .video-container iframe {
+        height: 600px;        /* Ajustando a altura do vídeo em telas grandes */
+    }
+}
     </style>
 </head>
 <body>

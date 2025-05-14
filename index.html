@@ -57,6 +57,7 @@
             justify-content: center;
             margin-top: 30px;
             flex-wrap: wrap; /* Para adaptar melhor em telas pequenas */
+            gap: 10px; /* Adiciona espaçamento entre as abas */
         }
 
         .aba {
@@ -288,23 +289,25 @@
     footer p {
         font-size: 0.9rem;
     }
-/* Estilo para tornar os vídeos responsivos */
+
+/* Estilo para tornar os vídeos responsivos e centralizados */
 .video-container {
-    position: relative;
-    padding-top: 56.25%; /* Proporção de 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background-color: #000; /* Cor de fundo para evitar espaços em branco */
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    width: 100%;
+    max-width: 900px;         /* Limita o tamanho máximo dos vídeos */
+    margin: 20px auto;        /* Centraliza o vídeo na tela e adiciona margem */
 }
 
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 500px;  /* Tamanho fixo da altura (ajuste conforme necessário) */
+    max-width: 900px;  /* O vídeo não vai ultrapassar esse tamanho */
+    border-radius: 8px;  /* Arredonda os cantos do vídeo */
+
 }
+
 
     </style>
 </head>

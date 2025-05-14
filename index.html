@@ -289,28 +289,32 @@
     footer p {
         font-size: 0.9rem;
     }
-
-/* Estilo para tornar os vídeos responsivos e centralizados */
-.video-container {
-    display: flex;
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;      /* Centraliza verticalmente */
-    width: 100%;
-    max-width: 900px;         /* Limita o tamanho máximo dos vídeos */
-    margin: 20px auto;        /* Centraliza o vídeo na tela e adiciona margem */
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 500px;  /* Tamanho fixo da altura (ajuste conforme necessário) */
-    border-radius: 8px;  /* Arredonda os cantos do vídeo */
-}
-/* Adicionando uma regra de ajuste específico para telas maiores */
-@media (min-width: 1024px) {
-    .video-container iframe {
-        height: 600px;        /* Ajustando a altura do vídeo em telas grandes */
+ /* Estilos responsivos para os vídeos */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin-top: 20px;
     }
-}
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Ajustes responsivos para telas menores */
+    @media (max-width: 768px) {
+        .video-container {
+            padding-bottom: 75%; /* Aspect ratio ajustado para telas menores */
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -452,12 +456,11 @@
         <p>
             📂 <strong>Repositório no GitHub:</strong> <a href="https://github.com/marcellytholanda/site-alfaar" target="_blank" class="link-destaque">Veja o código e recursos</a>
         </p>
+    <!-- Vídeo da Landing Page -->
+        <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/0t3LSjDXnEc" title="Landing Page para Alfaar Refrigeração" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
-
- <!-- Vídeo da Landing Page -->
-    <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/0t3LSjDXnEc" title="Vídeo da Landing Page" frameborder="0" allowfullscreen></iframe>
-</div>
 
     <div class="projeto">
         <h3>Análise de Dados Climáticos: Visualização Interativa com Inteligência Artificial</h3>
@@ -471,12 +474,12 @@
         <p>
             📂 <strong>Repositório GitHub:</strong> <a href="https://github.com/marcellytholanda/WeatherAI-Dashboard" target="_blank" class="link-destaque">Veja o código e a demonstração</a>
         </p>
+    <!-- Vídeo do Dashboard Interativo -->
+        <div class="video-container">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/vJRHqmaUSrI" title="Dashboard Interativo - Análise de Dados Climáticos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 
-<!-- Vídeo do Dashboard -->
-    <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/vJRHqmaUSrI" title="Vídeo do Dashboard" frameborder="0" allowfullscreen></iframe>
-</div>
 </div>
 
     <div id="contato" class="conteudo-aba">
